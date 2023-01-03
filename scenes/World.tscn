@@ -1,11 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/snowButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/greenFish.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/lightButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/PezDani.tscn" type="PackedScene" id=5]
 
-[node name="World" type="Spatial"]
+[node name="Spatial" type="Spatial"]
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.35885e-08, -0.270634, 0.962682, 3.2759e-09, 0.962682, 0.270634, -1, 1.49502e-08, -4.10753e-08, 8.64618, 2.50578, 0 )
+[node name="greenFish" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+
+[node name="lightButton" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -4.13233, -6.19204 )
+
+[node name="PezDani" parent="." instance=ExtResource( 5 )]
+transform = Transform( 2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 1.4645, 1.79387, 0 )
+
+[node name="snowButton" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -4.25043, 7.20549 )
 
 [node name="Tank" parent="." instance=ExtResource( 1 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+transform = Transform( 5, -0.000430616, 0.00126569, 0.000432195, 5, -0.00640693, -0.00126515, 0.00640703, 5, 0, 0, 0 )

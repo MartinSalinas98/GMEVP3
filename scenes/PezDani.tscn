@@ -6,3 +6,5 @@
 
 [node name="AnimationPlayer" parent="." index="3"]
 playback_speed = 1.5
+
+[node name="MovementTimer" type="Timer" parent="." index="4"]
