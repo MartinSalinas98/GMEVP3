@@ -18,7 +18,7 @@ transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0
 transform = Transform( 2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 1.4645, 1.79387, 0 )
 
 [node name="snowButton" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -4.25043, 7.20549 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.108216, -0.0948677, 4.41673 )
 
 [node name="Tank" parent="." instance=ExtResource( 1 )]
 transform = Transform( 5, -0.000430616, 0.00126569, 0.000432195, 5, -0.00640693, -0.00126515, 0.00640703, 5, 0, 0, 0 )
