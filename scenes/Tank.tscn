@@ -5,4 +5,4 @@
 [node name="Tank" instance=ExtResource( 1 )]
 
 [node name="Camera" parent="." index="6"]
-transform = Transform( -0.356151, 0, 0.934428, 0, 1, 0, -0.934428, 0, -0.356151, 6.05686, 0.321648, -2.32067 )
+transform = Transform( -0.356151, 0, 0.934428, 0, 1, 0, -0.934428, 0, -0.356151, 6.05686, 0.00902033, -2.32067 )
