@@ -83,4 +83,4 @@ anims/on = SubResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.10333, 0, 0.461526, 0 )
 shape = SubResource( 6 )
 
-[connection signal="area_entered" from="." to="." method="_on_snowButton_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_snowButton_body_entered"]

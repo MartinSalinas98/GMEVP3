@@ -51,3 +51,8 @@ func _on_MovementTimer_timeout():
 	in_action = false
 	$MovementTimer.wait_time =  floor(rand_range(4,8))
 
+
+
+func _on_greenFish_body_entered(body):
+	body.movement.z = -1*body.speed
+	body.rotation_degrees = Vector3(0,180,0)

@@ -1,24 +1,62 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/Tank.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/snowButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/greenFish.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/lightButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/PezDani.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/enviroment/snowbutton/skinsnow.png" type="Texture" id=6]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.16129, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 15, 1, 5 )
+gravity = Vector3( 0, -1, 0 )
+scale = 0.2
+scale_random = 1.0
+color_ramp = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_billboard_mode = 1
+albedo_texture = ExtResource( 6 )
+
+[sub_resource type="QuadMesh" id=5]
+material = SubResource( 4 )
+size = Vector2( 0.2, 0.2 )
 
 [node name="Spatial" type="Spatial"]
 
 [node name="greenFish" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+gravity_scale = 0.0
 
 [node name="lightButton" parent="." instance=ExtResource( 4 )]
 transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -4.13233, -6.19204 )
 
 [node name="PezDani" parent="." instance=ExtResource( 5 )]
 transform = Transform( 2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 1.4645, 1.79387, 0 )
+script = null
 
 [node name="snowButton" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.108216, -0.0948677, 4.41673 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.108216, -0.588701, 4.41673 )
+
+[node name="snow" type="Particles" parent="snowButton"]
+transform = Transform( -4.37114e-08, 0, 1.03244, 0, 1, 0, -1, 0, -4.51292e-08, 0, 9.97994, -8.96196 )
+emitting = false
+amount = 30
+lifetime = 4.0
+visibility_aabb = AABB( -17.3422, -0.001, -7.2757, 34.6844, 0.002, 14.5514 )
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )
 
 [node name="Tank" parent="." instance=ExtResource( 1 )]
 transform = Transform( 5, -0.000430616, 0.00126569, 0.000432195, 5, -0.00640693, -0.00126515, 0.00640703, 5, 0, 0, 0 )

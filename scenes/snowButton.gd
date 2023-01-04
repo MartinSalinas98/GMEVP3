@@ -2,28 +2,25 @@ extends Area
 
 var on = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_snowButton_area_entered(area):
-	#self.enabled = !self.enabled
+func _on_snowButton_body_entered(body):
+	if body.name == "greenFish" or body.name == "PezDani":
+		body.movement.z = -1*body.speed
+		body.rotation_degrees = Vector3(0,180,0)
+		
 		if on == false:
 			$AnimationPlayer.play("on")
-			
-			
-		if on == true:
+			on = true
+			for child in get_children():
+				if child.name == "snow":
+					child.emitting = true
+		
+		elif on == true:
 			$AnimationPlayer.play("off")
 			on = false
+			for child in get_children():
+				if child.name == "snow":
+					print("ciao")
+					child.emitting = false
+				
 			
