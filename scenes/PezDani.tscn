@@ -297,7 +297,7 @@ tracks/13/keys = PoolRealArray( 0, 1, 0, 0, 0, -4.65106e-10, 2.27374e-12, 2.3282
 radius = 0.645317
 height = 0.0400666
 
-[node name="PezDani" type="RigidBody"]
+[node name="PezDani" type="KinematicBody"]
 transform = Transform( -0.0644103, 0, -0.997923, 0, 1, 0, 0.997923, 0, -0.0644103, 0, 0, 0 )
 
 [node name="Vacío001" type="Spatial" parent="."]

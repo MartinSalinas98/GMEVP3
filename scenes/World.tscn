@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/Tank.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/snowButton.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/lightButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/PezDani.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/enviroment/snowbutton/skinsnow.png" type="Texture" id=6]
+[ext_resource path="res://scenes/christmasTree.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.16129, 1 )
@@ -37,10 +38,12 @@ size = Vector2( 0.2, 0.2 )
 
 [node name="greenFish" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
-gravity_scale = 0.0
 
 [node name="lightButton" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -4.13233, -6.19204 )
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -0.224482, -3.51417 )
+
+[node name="christmasTree" parent="lightButton" instance=ExtResource( 7 )]
+transform = Transform( -2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, -1.00952, -1.3275, -19.7389 )
 
 [node name="PezDani" parent="." instance=ExtResource( 5 )]
 transform = Transform( 2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 1.4645, 1.79387, 0 )

@@ -1,0 +1,139 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/enviroment/christmastree/christmasTree.glb" type="PackedScene" id=1]
+
+[node name="christmasTree" instance=ExtResource( 1 )]
+
+[node name="lights" type="Spatial" parent="." index="2"]
+
+[node name="light1" type="OmniLight" parent="lights" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.468224, 1.66034, 0.0330925 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.324753
+
+[node name="light2" type="OmniLight" parent="lights" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55468, 0.4123, 0.154438 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.371962
+
+[node name="light3" type="OmniLight" parent="lights" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.879448, -0.928749, 0.201134 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.409507
+
+[node name="light4" type="OmniLight" parent="lights" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04899, -2.10752, 0.251579 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light5" type="OmniLight" parent="lights" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239861, -1.00641, -0.921707 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light6" type="OmniLight" parent="lights" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.221825, 0.257702, -0.674755 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light7" type="OmniLight" parent="lights" index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.148019, 1.4161, -0.43108 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light8" type="OmniLight" parent="lights" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.336875, 2.04735, -0.125558 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light9" type="OmniLight" parent="lights" index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.560187, 0.744119, -0.125558 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light10" type="OmniLight" parent="lights" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.732062, -0.485245, -0.213882 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light11" type="OmniLight" parent="lights" index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.899131, -1.79446, -0.213882 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light12" type="OmniLight" parent="lights" index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32138, -2.11849, 0.964112 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light13" type="OmniLight" parent="lights" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.250422, -0.728108, 0.877579 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light14" type="OmniLight" parent="lights" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0789404, 0.473746, 0.598282 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light15" type="OmniLight" parent="lights" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0364752, 2.01141, 0.356491 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light16" type="OmniLight" parent="lights" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312858, 1.28148, 0.356491 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light17" type="OmniLight" parent="lights" index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.789434, -1.03784, 0.529244 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light18" type="OmniLight" parent="lights" index="17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.84292, -2.05092, 0.478533 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light19" type="OmniLight" parent="lights" index="18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312858, -2.02495, -0.912035 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light20" type="OmniLight" parent="lights" index="19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.776727, -1.70269, -0.442834 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light21" type="OmniLight" parent="lights" index="20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.728234, -0.340962, -0.348497 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
+
+[node name="light22" type="OmniLight" parent="lights" index="21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.503845, -1.47381, 0.689171 )
+light_color = Color( 1, 0, 0.772549, 1 )
+light_energy = 0.0
+omni_range = 0.434719
