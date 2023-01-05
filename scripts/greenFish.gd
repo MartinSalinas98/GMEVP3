@@ -37,6 +37,17 @@ func _process(delta):
 			
 		if action == 4:
 			in_action = true
+			$AnimationPlayer.current_animation = "swimming"
+			movement = Vector3(0,-1,0)
+			rotation_degrees = Vector3(90,0,-90)
+		if action == 5:
+			in_action = true
+			$AnimationPlayer.current_animation = "swimming"
+			movement = Vector3(0,1,0)
+			rotation_degrees = Vector3(-90, -90, 0)
+			
+		if action == 6:
+			in_action = true
 			movement = Vector3(0,0,0)
 			$AnimationPlayer.current_animation = "stay"
 			
@@ -47,7 +58,7 @@ func _process(delta):
 
 
 func _on_MovementTimer_timeout():
-	action = floor(rand_range(0, 4.9))
+	action = floor(rand_range(0, 6.9))
 	in_action = false
 	$MovementTimer.wait_time =  floor(rand_range(4,8))
 

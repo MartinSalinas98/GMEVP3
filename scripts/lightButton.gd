@@ -13,8 +13,9 @@ func _on_lightButton_body_entered(body):
 					if child.name == "christmasTree":
 						var tree = get_node("christmasTree")						
 						var lights = tree.get_node("lights")
-						for childlights in lights.get_children():
-							childlights.light_energy = 10
+						var animation = lights.get_node("AnimationPlayer")
+						animation.play("on")
+						animation.get_animation("on").set_loop(true)
 
 			elif on == true:
 				$AnimationPlayer.play("off")
@@ -23,5 +24,5 @@ func _on_lightButton_body_entered(body):
 					if child.name == "christmasTree":
 						var tree = get_node("christmasTree")
 						var lights = tree.get_node("lights")
-						for childlights in lights.get_children():
-							childlights.light_energy = 0
+						var animation = lights.get_node("AnimationPlayer")
+						animation.play("off")
