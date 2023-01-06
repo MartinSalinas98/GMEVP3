@@ -1,8 +1,33 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/enviroment/Tank/Tank.dae" type="PackedScene" id=1]
+[ext_resource path="res://assets/enviroment/backgroud/Room360.jpg" type="Texture" id=2]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 2 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[sub_resource type="CubeMesh" id=3]
+size = Vector3( 50, 5, 50 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 2, 100, 2 )
 
 [node name="Tank" instance=ExtResource( 1 )]
 
 [node name="Camera" parent="." index="6"]
-transform = Transform( -0.356151, 0, 0.934428, 0, 1, 0, -0.934428, 0, -0.356151, 6.05686, 0.00902033, -2.32067 )
+transform = Transform( 0.0984859, 0, 0.995138, 0, 1, 0, -0.995138, 0, 0.0984859, 6.0695, 0.00902033, 0.492787 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="9"]
+environment = SubResource( 2 )
+
+[node name="Tabla Pecera" type="MeshInstance" parent="." index="10"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.0399384, -1.2078, 0.0796373 )
+mesh = SubResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="." index="11"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -6.02203, 0 )
+mesh = SubResource( 4 )
