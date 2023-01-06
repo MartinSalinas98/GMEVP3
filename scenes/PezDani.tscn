@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/characters/dani/PezCuerpo.material" type="Material" id=1]
+[ext_resource path="res://scripts/PezDani.gd" type="Script" id=2]
 [ext_resource path="res://assets/characters/dani/PezBoca.material" type="Material" id=3]
 [ext_resource path="res://assets/characters/dani/PezOjo.material" type="Material" id=4]
 
@@ -299,6 +300,7 @@ height = 0.0400666
 
 [node name="PezDani" type="KinematicBody"]
 transform = Transform( -0.0644103, 0, -0.997923, 0, 1, 0, 0.997923, 0, -0.0644103, 0, 0, 0 )
+script = ExtResource( 2 )
 
 [node name="Vacío001" type="Spatial" parent="."]
 transform = Transform( 0, 1, 0, 0, 0, -1, -1, 0, 0, 0, 0, 2.18634 )
@@ -395,3 +397,5 @@ anims/PezRodando = SubResource( 4 )
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.0415095, 0, 0.999138, 0, 1, 0, -0.999138, 0, 0.0415095, 0, 0, 0 )
 shape = SubResource( 5 )
+
+[connection signal="timeout" from="MovementTimer" to="." method="_on_MovementTimer_timeout"]

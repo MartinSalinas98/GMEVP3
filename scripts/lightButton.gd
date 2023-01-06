@@ -3,7 +3,7 @@ extends Area
 var on = false
 
 func _on_lightButton_body_entered(body):
-	if body.name == "greenFish":
+	if body.name == "greenFish" or body.name == "PezDani":
 			body.movement.z = -1*body.speed
 			body.rotation_degrees = Vector3(0,180,0)
 			if on == false:
