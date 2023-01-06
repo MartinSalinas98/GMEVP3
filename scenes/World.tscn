@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/PezDani.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/enviroment/snowbutton/skinsnow.png" type="Texture" id=6]
 [ext_resource path="res://scenes/christmasTree.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Feeder.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/FeederAnim.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.16129, 1 )
@@ -41,19 +41,19 @@ size = Vector2( 0.2, 0.2 )
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
 
 [node name="lightButton" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -0.224482, -3.51417 )
+transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -7.56452, -0.532488, 15.878 )
 
 [node name="christmasTree" parent="lightButton" instance=ExtResource( 7 )]
-transform = Transform( -2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, -1.00952, -1.3275, -19.7389 )
+transform = Transform( 2.62268e-07, 7.64274e-15, -2, 2, 8.74228e-08, 2.62268e-07, 8.74228e-08, -2, 3.82135e-15, 3.88607, 16.1386, 10.4776 )
 
 [node name="PezDani" parent="." instance=ExtResource( 5 )]
 transform = Transform( 2.38498e-08, 0, -2, 0, 2, 0, 2, 0, 2.38498e-08, 1.4645, 1.79387, 0 )
 
 [node name="snowButton" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.108216, -0.588701, 4.41673 )
+transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.589, -13 )
 
 [node name="snow" type="Particles" parent="snowButton"]
-transform = Transform( -4.37114e-08, 0, 1.032, 0, 2, 0, -1, 0, -4.51102e-08, 0, 9.97994, -8.96196 )
+transform = Transform( 1, 7.64274e-15, 1.80441e-07, -1.74846e-07, 8.74228e-08, 1.032, -3.82137e-15, -2, 4.51102e-08, -25.8715, 17.2164, -16.7307 )
 emitting = false
 amount = 30
 lifetime = 4.0
@@ -62,7 +62,7 @@ process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 5 )
 
 [node name="Tank" parent="." instance=ExtResource( 1 )]
-transform = Transform( 5, -0.000430616, 0.00126569, 0.000432195, 5, -0.00640693, -0.00126515, 0.00640703, 5, 0, 0, 0 )
+transform = Transform( 10, -0.000861147, 0.00253141, 0.00086439, 9.99999, -0.0128138, -0.0025303, 0.012814, 9.99999, 0, 0, 0 )
 
-[node name="Feeder" parent="." instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 200, -3, 1 )
+[node name="FeederAnim" parent="." instance=ExtResource( 8 )]
+transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, -1.56234, 0.98311, 18.7389 )
