@@ -1,9 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://assets/enviroment/TankWalls/TankWalls.glb" type="PackedScene" id=1]
 [ext_resource path="res://assets/enviroment/TankWalls/fondo2_1.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/enviroment/backgroud/Room360.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/enviroment/TankWalls/suelo.jpg" type="Texture" id=4]
+[ext_resource path="res://scripts/LeftWall.gd" type="Script" id=5]
+[ext_resource path="res://scenes/RightWall.gd" type="Script" id=6]
+[ext_resource path="res://scripts/upWall.gd" type="Script" id=7]
+[ext_resource path="res://scripts/downWall.gd" type="Script" id=8]
+[ext_resource path="res://scripts/backWall.gd" type="Script" id=9]
+[ext_resource path="res://scripts/frontWall.gd" type="Script" id=10]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_texture = ExtResource( 2 )
@@ -40,6 +46,24 @@ size = Vector3( 50, 5, 50 )
 [sub_resource type="CubeMesh" id=7]
 size = Vector3( 2, 100, 2 )
 
+[sub_resource type="CubeMesh" id=9]
+
+[sub_resource type="SpatialMaterial" id=10]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 1, 0.800535, 0.0844925 )
+
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="SpatialMaterial" id=13]
+flags_transparent = true
+albedo_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="BoxShape" id=14]
+extents = Vector3( 0.282934, 1.86073, 0.0764206 )
+
 [node name="TankWalls" instance=ExtResource( 1 )]
 
 [node name="Fondo" parent="." index="3"]
@@ -65,3 +89,85 @@ mesh = SubResource( 6 )
 [node name="MeshInstance" type="MeshInstance" parent="." index="9"]
 transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -6.02203, 0 )
 mesh = SubResource( 7 )
+
+[node name="LeftWall" type="Area" parent="." index="10"]
+script = ExtResource( 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="LeftWall" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.872606, 0, 0, 0, 0.0197388, 0, 0, 1.9136 )
+mesh = SubResource( 9 )
+material/0 = SubResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="LeftWall" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86825 )
+shape = SubResource( 11 )
+
+[node name="RightWall" type="Area" parent="." index="11"]
+script = ExtResource( 6 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RightWall" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.89493, 0, 0, 0, 0.0387064, 0, 0, -1.89018 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RightWall" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.89272 )
+shape = SubResource( 14 )
+
+[node name="upWall" type="Area" parent="." index="12"]
+script = ExtResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="upWall" index="0"]
+transform = Transform( 1, 0, 0, 0, -3.91186e-08, -0.0387064, 0, 1.91012, -3.61118e-09, 0, 0.866299, -0.00156623 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="upWall" index="1"]
+transform = Transform( 2.68992, 0, 0, 0, -4.37114e-08, 1, 0, -2.10399, -9.19684e-08, 0.0267931, 1.0499, -0.00476009 )
+shape = SubResource( 14 )
+
+[node name="downWall" type="Area" parent="." index="13"]
+transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.024725, 0 )
+script = ExtResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="downWall" index="0"]
+transform = Transform( 1, 0, 0, 0, -3.91186e-08, -0.0387064, 0, 1.91012, -3.61118e-09, 0, 0.866299, -0.00156623 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="downWall" index="1"]
+transform = Transform( 3.1733, 0, 0, 0, 0.0718336, 2.12424e-06, 0, 2.12424e-06, 24.3703, 0, 0.883724, 0.0523931 )
+shape = SubResource( 14 )
+
+[node name="backWall" type="Area" parent="." index="14"]
+transform = Transform( 4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 0, 3.82137e-15, -8.74228e-08, -1, -0.0272853, -0.024725, 0 )
+script = ExtResource( 9 )
+
+[node name="MeshInstance" type="MeshInstance" parent="backWall" index="0"]
+transform = Transform( 1, 0, 0, 0, -3.91186e-08, -0.0387064, 0, 1.91012, -3.61118e-09, 0, 0.866299, -0.00156623 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="backWall" index="1"]
+transform = Transform( 2.9262, -7.97239e-15, -8.41968e-08, 8.41968e-08, 5.44788e-08, -1, -4.29202e-15, 2.12316, -1.90997e-07, -3.35276e-08, 0.831401, 0.000474738 )
+shape = SubResource( 14 )
+
+[node name="frontWall" type="Area" parent="." index="15"]
+transform = Transform( 4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 0, 3.82137e-15, -8.74228e-08, -1, 1.73429, -0.024725, 0 )
+script = ExtResource( 10 )
+
+[node name="MeshInstance" type="MeshInstance" parent="frontWall" index="0"]
+transform = Transform( 1, 0, 2.67305e-23, -3.34075e-22, -3.91186e-08, -0.0387064, 0, 1.91012, -3.61118e-09, -1.86265e-09, 0.866299, -0.00156623 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="CollisionShape" type="CollisionShape" parent="frontWall" index="1"]
+transform = Transform( 3.27394, 1.43177e-07, -4.37113e-08, 1.43177e-07, -0.00157074, 0.999999, 4.37113e-08, -0.999999, -0.00157074, -4.47035e-08, 0.8696, 0.00770609 )
+shape = SubResource( 14 )
+
+[connection signal="body_entered" from="LeftWall" to="LeftWall" method="_on_LeftWall_body_entered"]
+[connection signal="body_entered" from="RightWall" to="RightWall" method="_on_RightWall_body_entered"]
+[connection signal="body_entered" from="upWall" to="upWall" method="_on_upWall_body_entered"]
+[connection signal="body_entered" from="downWall" to="downWall" method="_on_downWall_body_entered"]
+[connection signal="body_entered" from="backWall" to="backWall" method="_on_backWall_body_entered"]
+[connection signal="body_entered" from="frontWall" to="frontWall" method="_on_frontWall_body_entered"]
