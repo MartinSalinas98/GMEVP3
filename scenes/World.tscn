@@ -1,6 +1,5 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://scenes/Tank.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/snowButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/greenFish.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/lightButton.tscn" type="PackedScene" id=4]
@@ -63,10 +62,6 @@ lifetime = 4.0
 visibility_aabb = AABB( -33.2927, -0.001, -14.0273, 66.5854, 0.002, 28.0546 )
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 5 )
-
-[node name="Tank" parent="." instance=ExtResource( 1 )]
-transform = Transform( 10, -0.000861147, 0.00253141, 0.00086439, 9.99999, -0.0128138, -0.0025303, 0.012814, 9.99999, 0, 0, 2.872 )
-visible = false
 
 [node name="FeederAnim" parent="." instance=ExtResource( 8 )]
 transform = Transform( 8.74228e-08, -1.32005e-14, 2, -3.01992e-07, -2, 5.0822e-21, 2, -3.01992e-07, -8.74228e-08, 2.48745, 0.98311, -24.1705 )
