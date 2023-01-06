@@ -78,7 +78,6 @@ surfaces/0 = {
 [sub_resource type="Animation" id=5]
 resource_name = "Abrir"
 length = 5.83333
-loop = true
 tracks/0/type = "transform"
 tracks/0/path = NodePath("Cube001")
 tracks/0/interp = 1
