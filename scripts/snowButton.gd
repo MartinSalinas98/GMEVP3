@@ -20,7 +20,6 @@ func _on_snowButton_body_entered(body):
 			on = false
 			for child in get_children():
 				if child.name == "snow":
-					print("ciao")
 					child.emitting = false
 				
 			

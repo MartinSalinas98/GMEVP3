@@ -52,7 +52,7 @@ transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, 
 transform = Transform( 5.24536e-07, 1.74846e-07, -4, 4, 3.01992e-07, 5.24536e-07, 3.01992e-07, -4, -1.74846e-07, 6.42326, 16.1386, 5.8546 )
 
 [node name="BrownFish" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.353792, 1.96846, 0, -1.96846, 0.353792, 0, 0, 0, 2, 1.21914, -5.32195, -48.704 )
+transform = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 1.22305, -5.32195, -48.6902 )
 
 [node name="SnowButton" parent="." instance=ExtResource( 2 )]
 transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.589, -30.9931 )
@@ -69,19 +69,11 @@ draw_pass_1 = SubResource( 5 )
 [node name="FeederAnim" parent="." instance=ExtResource( 8 )]
 transform = Transform( 8.74228e-08, -1.32005e-14, 2, -3.01992e-07, -2, 5.0822e-21, 2, -3.01992e-07, -8.74228e-08, 2.48745, 0.98311, -24.1705 )
 
-[node name="Chest" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.668691, -8.67222, -37.4389 )
-
-[node name="TankWalls" parent="." instance=ExtResource( 10 )]
-transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0206242, -0.0167818, -43.7114 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -0.236465, 0, 0.97164, 0, 1, 0, -0.97164, 0, -0.236465, 17.0055, 0, -52.3654 )
-
-[node name="Bubbles" type="CPUParticles" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.49088, 3.85347, -25.9917 )
+[node name="Bubbles" type="CPUParticles" parent="FeederAnim"]
+transform = Transform( 2.18557e-08, -7.5498e-08, 0.5, -3.30012e-15, -0.5, -7.5498e-08, 0.5, -1.90582e-21, -2.18557e-08, -0.9106, -1.43518, 0.00171518 )
 material_override = ExtResource( 1 )
 cast_shadow = 0
+emitting = false
 lifetime = 4.0
 explosiveness = 0.2
 randomness = 0.85
@@ -90,3 +82,12 @@ emission_shape = 1
 emission_sphere_radius = 0.35
 gravity = Vector3( 0, 1, 0 )
 scale_amount = 0.35
+
+[node name="Chest" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.668691, -8.67222, -37.4389 )
+
+[node name="TankWalls" parent="." instance=ExtResource( 10 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0206242, -0.0167818, -43.7114 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.236465, 0, 0.97164, 0, 1, 0, -0.97164, 0, -0.236465, 17.0055, 0, -52.3654 )
