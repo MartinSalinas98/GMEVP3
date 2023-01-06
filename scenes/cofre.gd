@@ -34,7 +34,7 @@ func _on_cofre_body_entered(body):
 			body.rotation_degrees = Vector3(0,-180,90)
 			
 			for child in get_children():
-					var animation = get_node("AnimationPlayer")
-					animation.play("Abrir")
+				var animation = get_node("AnimationPlayer")
+				animation.play("Abrir")
 				
 		

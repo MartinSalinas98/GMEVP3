@@ -521,3 +521,7 @@ anims/Swimming = SubResource( 5 )
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 0.0110826, 0, 0.999939, 0, 1, 0, -0.999939, 0, 0.0110826, 0, 0, 0 )
 shape = SubResource( 8 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0391641, 0.362265, 0 )
+fov = 90.0

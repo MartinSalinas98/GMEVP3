@@ -2,11 +2,12 @@ extends KinematicBody
 
 var speed = 1
 var movement = Vector3(0,0,0)
-
+var camera_on = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("Still")
+	
 
 
 func _physics_process(delta):
@@ -40,5 +41,17 @@ func _input(event):
 		rotation_degrees = Vector3(0,0,-90)
 	elif event.is_action_pressed("ui_accept"):
 		movement = Vector3(0,0,0)
+		
+	if event.is_action_pressed("ui_cam"):
+		if camera_on == false:
+			camera_on = true
+			for child in get_children():
+				var camera = get_node("Camera")
+				camera.current = true
+		elif camera_on == true:
+			camera_on = false
+			for child in get_children():
+				var camera = get_node("Camera")
+				camera.current = false
 	
 		
