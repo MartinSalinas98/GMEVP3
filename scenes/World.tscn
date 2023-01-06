@@ -44,7 +44,7 @@ size = Vector2( 0.4, 0.4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.5031 )
 
 [node name="GreenFish" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, -2.40858, -47.1101 )
+transform = Transform( -0.779684, 0, 0.179144, 0, 0.8, 0, -0.179144, 0, -0.779684, 0.137009, -2.48186, -43.4988 )
 
 [node name="LightButton" parent="." instance=ExtResource( 4 )]
 transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, 1.167, -50.0005 )
@@ -59,7 +59,7 @@ spot_range = 29.6246
 spot_angle = 49.7496
 
 [node name="BrownFish" parent="." instance=ExtResource( 5 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.77569, -2.00222, -50.1126 )
+transform = Transform( 8.74228e-08, 2, -1.74846e-07, 2, -8.74228e-08, 0, -7.64274e-15, -1.74846e-07, -2, 5.77569, -2.00222, -50.1126 )
 
 [node name="SnowButton" parent="." instance=ExtResource( 2 )]
 transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.589, -30.9931 )
@@ -100,4 +100,4 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0206242, -0.0167818, -43.
 transform = Transform( -0.236465, 0, 0.97164, 0, 1, 0, -0.97164, 0, -0.236465, 17.0055, 0, -52.3654 )
 
 [node name="PlayerFish" parent="." instance=ExtResource( 11 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -2.95145, -2, -39.4146 )
+transform = Transform( 1.31134e-07, 3, 2.62268e-07, 3, -1.31134e-07, 0, 1.14641e-14, 2.62268e-07, -3, -2.95145, -2, -39.4146 )

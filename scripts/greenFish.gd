@@ -1,7 +1,7 @@
 
 extends Spatial
 
-var speed = 0.5
+var speed = 15
 var movement = Vector3(0,0,0)
 var action = 0
 var in_action = false

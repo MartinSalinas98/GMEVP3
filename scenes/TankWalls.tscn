@@ -62,7 +62,7 @@ flags_transparent = true
 albedo_color = Color( 1, 1, 1, 0 )
 
 [sub_resource type="BoxShape" id=14]
-extents = Vector3( 0.282934, 1.86073, 0.0764206 )
+extents = Vector3( 0.901808, 0.908913, 0.0764206 )
 
 [node name="TankWalls" instance=ExtResource( 1 )]
 
@@ -91,6 +91,7 @@ transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -6.02203, 0 )
 mesh = SubResource( 7 )
 
 [node name="LeftWall" type="Area" parent="." index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0449357, 0, 0, 1.75652 )
 script = ExtResource( 5 )
 
 [node name="MeshInstance" type="MeshInstance" parent="LeftWall" index="0"]
@@ -99,10 +100,11 @@ mesh = SubResource( 9 )
 material/0 = SubResource( 10 )
 
 [node name="CollisionShape" type="CollisionShape" parent="LeftWall" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86825 )
+transform = Transform( 0.955237, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86825 )
 shape = SubResource( 11 )
 
 [node name="RightWall" type="Area" parent="." index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 0.0213239, 0, 0, 0 )
 script = ExtResource( 6 )
 
 [node name="MeshInstance" type="MeshInstance" parent="RightWall" index="0"]
@@ -111,10 +113,11 @@ mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RightWall" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.89272 )
+transform = Transform( 5.0093, 0, 0, 0, 4.4332, 0, 0, 0, 20.7926, 0, 0, -80.3468 )
 shape = SubResource( 14 )
 
 [node name="upWall" type="Area" parent="." index="12"]
+transform = Transform( 1, 0, 0, 0, 0.118576, 0, 0, 0, 1, 0, 0.768474, 0 )
 script = ExtResource( 7 )
 
 [node name="MeshInstance" type="MeshInstance" parent="upWall" index="0"]
@@ -123,11 +126,11 @@ mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="upWall" index="1"]
-transform = Transform( 2.68992, 0, 0, 0, -4.37114e-08, 1, 0, -2.10399, -9.19684e-08, 0.0267931, 1.0499, -0.00476009 )
+transform = Transform( 4.05171, 0, 0, 0, -4.87083e-08, 1.11431, 0, -8.59237, -3.75584e-07, 0.0267931, 2.06762, -0.00476009 )
 shape = SubResource( 14 )
 
 [node name="downWall" type="Area" parent="." index="13"]
-transform = Transform( 1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, -0.024725, 0 )
+transform = Transform( 1, 0, 0, 0, -0.209248, 1.82931e-08, 0, -3.51576e-08, -0.402156, 0, -0.935679, 0 )
 script = ExtResource( 8 )
 
 [node name="MeshInstance" type="MeshInstance" parent="downWall" index="0"]
@@ -136,11 +139,11 @@ mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="downWall" index="1"]
-transform = Transform( 3.1733, 0, 0, 0, 0.0718336, 2.12424e-06, 0, 2.12424e-06, 24.3703, 0, 0.883724, 0.0523931 )
+transform = Transform( 4.0604, 0, 0, 0, 0.0718336, 5.2025e-06, 0, 5.20249e-06, 59.5815, 0, -0.476672, 0.0523932 )
 shape = SubResource( 14 )
 
 [node name="backWall" type="Area" parent="." index="14"]
-transform = Transform( 4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 0, 3.82137e-15, -8.74228e-08, -1, -0.0272853, -0.024725, 0 )
+transform = Transform( 1.05026e-08, -0.240272, 2.10052e-08, -1, -4.37114e-08, 0, 3.82137e-15, -8.74228e-08, -1, -0.733022, -0.024725, 0 )
 script = ExtResource( 9 )
 
 [node name="MeshInstance" type="MeshInstance" parent="backWall" index="0"]
@@ -149,11 +152,11 @@ mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="backWall" index="1"]
-transform = Transform( 2.9262, -7.97239e-15, -8.41968e-08, 8.41968e-08, 5.44788e-08, -1, -4.29202e-15, 2.12316, -1.90997e-07, -3.35276e-08, 0.831401, 0.000474738 )
+transform = Transform( 4.10572, -3.71762e-14, -1.35755e-07, 1.35755e-07, 6.71025e-07, -1, -3.12421e-14, 9.17564, -1.11582e-06, -3.72529e-09, 0.877642, 0.000474734 )
 shape = SubResource( 14 )
 
 [node name="frontWall" type="Area" parent="." index="15"]
-transform = Transform( 4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 0, 3.82137e-15, -8.74228e-08, -1, 1.73429, -0.024725, 0 )
+transform = Transform( 5.03271e-09, -0.115135, 1.00654e-08, -1, -4.37114e-08, 0, 3.82137e-15, -8.74228e-08, -1, 0.935569, -0.024725, 0 )
 script = ExtResource( 10 )
 
 [node name="MeshInstance" type="MeshInstance" parent="frontWall" index="0"]
@@ -162,7 +165,7 @@ mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
 [node name="CollisionShape" type="CollisionShape" parent="frontWall" index="1"]
-transform = Transform( 3.27394, 1.43177e-07, -4.37113e-08, 1.43177e-07, -0.00157074, 0.999999, 4.37113e-08, -0.999999, -0.00157074, -4.47035e-08, 0.8696, 0.00770609 )
+transform = Transform( 5.18381, 2.2666e-07, -4.37113e-08, 2.2666e-07, -0.00157145, 0.999999, 3.96672e-07, -9.07481, -0.0142535, -5.58794e-08, 0.8696, 0.00770608 )
 shape = SubResource( 14 )
 
 [connection signal="body_entered" from="LeftWall" to="LeftWall" method="_on_LeftWall_body_entered"]
