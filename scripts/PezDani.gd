@@ -1,7 +1,7 @@
 extends KinematicBody
 
 
-var speed = 15
+var speed = 0.5
 var movement = Vector3(0,0,0)
 var action = 0
 var in_action = false

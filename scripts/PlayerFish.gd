@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var speed = 10
+var speed = 1
 var movement = Vector3(0,0,0)
 var camera_on = false
 
