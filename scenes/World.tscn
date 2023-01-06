@@ -1,6 +1,5 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://scenes/Tank.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/snowButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/greenFish.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/lightButton.tscn" type="PackedScene" id=4]
@@ -9,6 +8,7 @@
 [ext_resource path="res://scenes/christmasTree.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/FeederAnim.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/cofre.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/TankWalls.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.16129, 1 )
@@ -37,24 +37,25 @@ material = SubResource( 4 )
 size = Vector2( 0.2, 0.2 )
 
 [node name="Spatial" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.5031 )
 
 [node name="greenFish" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0 )
+transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, -44.9896 )
 
 [node name="lightButton" parent="." instance=ExtResource( 4 )]
-transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.532, 15.878 )
+transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.532, -53.2227 )
 
 [node name="christmasTree" parent="lightButton" instance=ExtResource( 7 )]
-transform = Transform( 2.62268e-07, 7.64274e-15, -2, 2, 8.74228e-08, 2.62268e-07, 8.74228e-08, -2, 3.82135e-15, 3.88607, 16.1386, 10.4776 )
+transform = Transform( 5.24536e-07, 1.74846e-07, -4, 4, 3.01992e-07, 5.24536e-07, 3.01992e-07, -4, -1.74846e-07, 6.42326, 16.1386, 5.8546 )
 
 [node name="PezDani" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.353792, 1.96846, 0, -1.96846, 0.353792, 0, 0, 0, 2, 1.21914, -5.32195, -0.333553 )
+transform = Transform( 0.353792, 1.96846, 0, -1.96846, 0.353792, 0, 0, 0, 2, 1.21914, -5.32195, -48.704 )
 
 [node name="snowButton" parent="." instance=ExtResource( 2 )]
-transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.589, -13 )
+transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, -0.5, -0.5, 6.55671e-08, 9.55343e-16, -8.5, -0.589, -30.9931 )
 
 [node name="snow" type="Particles" parent="snowButton"]
-transform = Transform( 1, 7.64274e-15, 1.80441e-07, -1.74846e-07, 8.74228e-08, 1.032, -3.82137e-15, -2, 4.51102e-08, -25.8715, 17.2164, -21.0262 )
+transform = Transform( 1, 7.64274e-15, 1.80441e-07, -1.74846e-07, 8.74228e-08, 1.032, -3.82137e-15, -2, 4.51102e-08, 25.9673, 17.2164, -21.0262 )
 emitting = false
 amount = 30
 lifetime = 4.0
@@ -62,11 +63,14 @@ visibility_aabb = AABB( -33.2927, -0.001, -14.0273, 66.5854, 0.002, 28.0546 )
 process_material = SubResource( 3 )
 draw_pass_1 = SubResource( 5 )
 
-[node name="Tank" parent="." instance=ExtResource( 1 )]
-transform = Transform( 10, -0.000861147, 0.00253141, 0.00086439, 9.99999, -0.0128138, -0.0025303, 0.012814, 9.99999, 0, 0, 0 )
-
 [node name="FeederAnim" parent="." instance=ExtResource( 8 )]
-transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, -1.56234, 0.98311, 18.7389 )
+transform = Transform( 8.74228e-08, -1.32005e-14, 2, -3.01992e-07, -2, 5.0822e-21, 2, -3.01992e-07, -8.74228e-08, 2.48745, 0.98311, -24.1705 )
 
 [node name="cofre" parent="." instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.27535, -7.18824, -5.34384 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.668691, -8.67222, -37.4389 )
+
+[node name="TankWalls" parent="." instance=ExtResource( 10 )]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0206242, -0.0167818, -43.7114 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.236465, 0, 0.97164, 0, 1, 0, -0.97164, 0, -0.236465, 17.0055, 0, -52.3654 )
