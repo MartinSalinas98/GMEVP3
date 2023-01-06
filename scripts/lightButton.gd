@@ -3,7 +3,7 @@ extends Area
 var on = false
 
 func _on_lightButton_body_entered(body):
-	if body.name == "GreenFish" or body.name == "BrownFish":
+	if body.name == "GreenFish" or body.name == "BrownFish" or body.name == "PlayerFish":
 		
 		if(body.rotation_degrees == Vector3 (0,0,0)):
 			body.movement = -1*body.speed * body.movement
@@ -26,9 +26,9 @@ func _on_lightButton_body_entered(body):
 		elif(body.rotation_degrees == Vector3 (-90,-90,0)):
 			body.movement = -1*body.speed * body.movement
 			body.rotation_degrees = Vector3(90,0,-90)
-		elif(body.rotation_degrees == Vector3 (0,180,90)):
+		elif(body.rotation_degrees == Vector3 (0,-180,90)):
 			body.movement = -1*body.speed * body.movement
-			body.rotation_degrees = Vector3(0,180,-90)
+			body.rotation_degrees = Vector3(0,0,-90)
 		elif(body.rotation_degrees == Vector3 (0,0,-90)):
 			body.movement = -1*body.speed * body.movement
 			body.rotation_degrees = Vector3(0,-180,90)

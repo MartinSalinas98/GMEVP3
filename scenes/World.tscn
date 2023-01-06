@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/materials/Bubble.material" type="Material" id=1]
 [ext_resource path="res://scenes/snowButton.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://scenes/FeederAnim.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/cofre.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/TankWalls.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/PlayerFish.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0, 0.16129, 1 )
@@ -97,3 +98,6 @@ transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0206242, -0.0167818, -43.
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.236465, 0, 0.97164, 0, 1, 0, -0.97164, 0, -0.236465, 17.0055, 0, -52.3654 )
+
+[node name="PlayerFish" parent="." instance=ExtResource( 11 )]
+transform = Transform( -1.31134e-07, 3, 0, -3, -1.31134e-07, 0, 0, 0, 3, -0.0512877, -2, -39.4146 )

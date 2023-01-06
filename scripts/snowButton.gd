@@ -4,7 +4,7 @@ var on = false
 
 
 func _on_snowButton_body_entered(body):
-	if body.name == "GreenFish" or body.name == "BrownFish":
+	if body.name == "GreenFish" or body.name == "BrownFish"  or body.name == "PlayerFish":
 		
 		if(body.rotation_degrees == Vector3 (0,0,0)):
 			body.movement = -1*body.speed * body.movement
