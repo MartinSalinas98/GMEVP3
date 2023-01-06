@@ -66,6 +66,7 @@ draw_pass_1 = SubResource( 5 )
 
 [node name="Tank" parent="." instance=ExtResource( 1 )]
 transform = Transform( 10, -0.000861147, 0.00253141, 0.00086439, 9.99999, -0.0128138, -0.0025303, 0.012814, 9.99999, 0, 0, 2.872 )
+visible = false
 
 [node name="FeederAnim" parent="." instance=ExtResource( 8 )]
 transform = Transform( 8.74228e-08, -1.32005e-14, 2, -3.01992e-07, -2, 5.0822e-21, 2, -3.01992e-07, -8.74228e-08, 2.48745, 0.98311, -24.1705 )
@@ -75,3 +76,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.668691, -8.67222, -37.4389 )
 
 [node name="TankWalls" parent="." instance=ExtResource( 10 )]
 transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0.0206242, -0.0167818, -43.7114 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.236465, 0, 0.97164, 0, 1, 0, -0.97164, 0, -0.236465, 17.0055, 0, -52.3654 )
