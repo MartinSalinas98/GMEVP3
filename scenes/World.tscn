@@ -51,6 +51,12 @@ transform = Transform( 6.55671e-08, 0.5, 2.18557e-08, 1.91069e-15, 2.18557e-08, 
 [node name="ChristmasTree" parent="LightButton" instance=ExtResource( 7 )]
 transform = Transform( 5.24536e-07, 1.74846e-07, -4, 4, 3.01992e-07, 5.24536e-07, 3.01992e-07, -4, -1.74846e-07, 13.5373, 16.1386, 5.8546 )
 
+[node name="TankLight" type="SpotLight" parent="LightButton"]
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 1.61195e-15, 1.74846e-07, 5.01111e-22, -2, -12.0631, 15.9968, -17.6948 )
+light_energy = 0.0
+spot_range = 29.6246
+spot_angle = 49.7496
+
 [node name="BrownFish" parent="." instance=ExtResource( 5 )]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 5.77569, -2.00222, -50.1126 )
 

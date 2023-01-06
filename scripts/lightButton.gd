@@ -43,6 +43,9 @@ func _on_lightButton_body_entered(body):
 					var animation = lights.get_node("AnimationPlayer")
 					animation.play("on")
 					animation.get_animation("on").set_loop(true)
+				if child.name == "TankLight":
+					var tanklight = get_node("TankLight")
+					tanklight.light_energy = 4
 		elif on == true:
 			$AnimationPlayer.play("off")
 			on = false
@@ -52,3 +55,6 @@ func _on_lightButton_body_entered(body):
 					var lights = tree.get_node("lights")
 					var animation = lights.get_node("AnimationPlayer")
 					animation.play("off")
+				if child.name == "TankLight":
+					var tanklight = get_node("TankLight")
+					tanklight.light_energy = 0
