@@ -1,11 +1,15 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://assets/enviroment/TankWalls/TankWalls.glb" type="PackedScene" id=1]
 [ext_resource path="res://assets/enviroment/TankWalls/fondo2_1.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/enviroment/backgroud/Room360.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/enviroment/TankWalls/suelo.jpg" type="Texture" id=4]
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_texture = ExtResource( 4 )
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.498039, 0.752941, 1, 0.235294 )
@@ -41,6 +45,9 @@ size = Vector3( 2, 100, 2 )
 [node name="Fondo" parent="." index="3"]
 transform = Transform( 0, 0.95, 0, -1.18006, 0, 0, 0, 0, 1.83032, -0.9, 0.192335, 0 )
 material/0 = SubResource( 3 )
+
+[node name="Suelo" parent="." index="4"]
+material/0 = SubResource( 8 )
 
 [node name="leftwall" parent="." index="5"]
 material/0 = SubResource( 1 )
